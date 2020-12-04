@@ -1,14 +1,3 @@
-// ---------------------------------------------------------------------------------------
-// Solution: AvalonDock
-// Project: TestApp
-// Filename: TestBehavior.cs
-// 
-// Last modified: 2020-12-04 08:33
-// Created:       2020-12-04 08:33
-// 
-// Copyright: 2020 Walter Wissing & Co
-// ---------------------------------------------------------------------------------------
-
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
