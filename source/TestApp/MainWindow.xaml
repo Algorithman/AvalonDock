@@ -17,6 +17,7 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:local="clr-namespace:TestApp"
 	xmlns:winformsIntegration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+	xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
 	Title="MainWindow"
 	Width="525"
 	Height="350"
@@ -141,8 +142,11 @@
 							</LayoutAnchorable>
 							<LayoutAnchorable Title="AutoHide2 Content" ContentId="AutoHide2Content">
 								<StackPanel Orientation="Vertical">
-									<TextBox />
-									<TextBox />
+									<TextBox>
+										<b:Interaction.Behaviors>
+											<local:TestBehavior/>
+										</b:Interaction.Behaviors>
+									</TextBox>
 								</StackPanel>
 							</LayoutAnchorable>
 						</LayoutAnchorGroup>
