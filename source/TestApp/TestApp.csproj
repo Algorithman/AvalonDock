@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
     <PropertyGroup>
         <RootNamespace>TestApp</RootNamespace>
-        <TargetFrameworks>netcoreapp3.0;net40</TargetFrameworks>
+        <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
         <UseWPF>true</UseWPF>
         <UseWindowsForms>true</UseWindowsForms>
         <ApplicationIcon />
@@ -17,5 +17,10 @@
       <ProjectReference Include="..\Components\AvalonDock.Themes.VS2010\AvalonDock.Themes.VS2010.csproj" />
       <ProjectReference Include="..\Components\AvalonDock.Themes.VS2013\AvalonDock.Themes.VS2013.csproj" />
       <ProjectReference Include="..\Components\AvalonDock\AvalonDock.csproj" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+      <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+        <Version>1.1.19</Version>
+      </PackageReference>
     </ItemGroup>
 </Project>

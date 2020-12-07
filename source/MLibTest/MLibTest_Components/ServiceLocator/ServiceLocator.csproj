@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0;net4.5</TargetFrameworks>
+    <AssemblyVersion>1.0.1.7643</AssemblyVersion>
+    <FileVersion>1.0.1.7643</FileVersion>
   </PropertyGroup>
 
 </Project>

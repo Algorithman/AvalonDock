@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0;net4.0</TargetFrameworks>
+    <AssemblyVersion>1.0.1.7643</AssemblyVersion>
+    <FileVersion>1.0.1.7643</FileVersion>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
@@ -11,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net4.0'">
-    <Reference Include="System.Security"/>
+    <Reference Include="System.Security" />
   </ItemGroup>
 
 </Project>

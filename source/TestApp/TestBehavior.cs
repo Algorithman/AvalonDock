@@ -5,7 +5,7 @@ using Microsoft.Xaml.Behaviors;
 
 namespace TestApp
 {
-	public class TestBehavior : Behavior<TextBox>
+	public class TestBehavior : BehaviorBase<TextBox>
 	{
 		public TestBehavior()
 		{
@@ -15,21 +15,36 @@ namespace TestApp
 		protected override void OnAttached()
 		{
 			base.OnAttached();
-			AssociatedObject.Unloaded += DetachMe;
 			Debug.WriteLine("ATTACHED");
 		}
 
 		private void DetachMe(object sender, RoutedEventArgs e)
 		{
 			Debug.WriteLine("DETACHME");
-			Detach();
 		}
 
 		protected override void OnDetaching()
 		{
-			AssociatedObject.Unloaded -= DetachMe;
-			Debug.WriteLine("DETACHING");
+			
 			base.OnDetaching();
+		}
+
+		protected override void OnSetup()
+		{
+			Debug.WriteLine("ATTACHING");
+			base.OnSetup();
+		}
+
+		protected override void OnCleanup()
+		{
+			Debug.WriteLine("DETACHING");
+			base.OnCleanup();
+		}
+
+		protected override void OnChanged()
+		{
+			Debug.WriteLine("CHANGING");
+			base.OnChanged();
 		}
 	}
 }

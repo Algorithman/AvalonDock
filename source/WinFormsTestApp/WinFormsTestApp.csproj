@@ -6,6 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <StartupObject>AvalonDock.WinFormsTestApp.Program</StartupObject>
+    <AssemblyVersion>1.0.1.7643</AssemblyVersion>
+    <FileVersion>1.0.1.7643</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
